@@ -108,7 +108,7 @@ void parse_file ( char * filename,
     char axis;
     int type;
     int step = 100;
-    int step_3d = 10;
+    int step_3d = 25;
 
     if ( strncmp(line, "box", strlen(line)) == 0 ) {
       fgets(line, sizeof(line), f);
@@ -283,9 +283,9 @@ void parse_file ( char * filename,
       fgets(line, sizeof(line), f);
       *strchr(line, '\n') = 0;
       //printf("SAVE\t%s\n", line);
-      clear_screen(s);
-      draw_lines(edges, s, c);
-      draw_polygons(polygons, s, c);
+      //clear_screen(s);
+      //draw_lines(edges, s, c);
+      //draw_polygons(polygons, s, c);
       save_extension(s, line);
     }//end save
 
